@@ -13,14 +13,10 @@ import pandas as pd
 from datetime import datetime, date
 
 
-if input('Введи 1 если prod') == '1':
-    API_TOKEN = '7923040381:AAGq_IWqljso21A6M1z_Ey6qXZl7LplIQnA'
-    state_for_database = True
-    file_path = 'data_history_prod.csv'
-else:
-    API_TOKEN = '7075176234:AAHfysESKxh3EuD_fYeXnhROY-yBpsIrgoc'
-    state_for_database = False
-    file_path = 'data_history_dev.csv'
+API_TOKEN = '7923040381:AAGq_IWqljso21A6M1z_Ey6qXZl7LplIQnA'
+state_for_database = True
+file_path = 'data_history_prod.csv'
+
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())  # Подключаем память для FSM
